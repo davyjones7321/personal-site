@@ -88,6 +88,29 @@ h1 {
     margin-top: 16px;
 }
 
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 10px 22px;
+    background: transparent;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    color: #6b9e9a;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.resume-btn:hover {
+    border-color: #6b9e9a;
+    background: rgba(107, 158, 154, 0.06);
+    color: #8fbfbb;
+}
+
 hr {
     border: none;
     border-top: 1px solid #1e1e1e;
@@ -134,6 +157,20 @@ h2 {
     line-height: 1.65;
 }
 
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: #6b9e9a;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.project-link:hover {
+    color: #8fbfbb;
+    text-decoration: underline;
+}
+
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -147,6 +184,47 @@ h2 {
     color: #777;
     padding: 4px 10px;
     border-radius: 3px;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 4px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.project-gallery::-webkit-scrollbar {
+    height: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 2px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
+
+.project-gallery img {
+    height: 180px;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #2a2a2a;
+    object-fit: cover;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.03);
+    border-color: #3a3a3a;
 }
 
 .skills-list {
@@ -225,5 +303,9 @@ footer {
 
     .project-card {
         padding: 20px;
+    }
+
+    .project-gallery img {
+        height: 140px;
     }
 }
