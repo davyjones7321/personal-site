@@ -1,0 +1,121 @@
+/* Navbar Styles */
+.navbar-container {
+    width: 100%;
+    position: fixed;
+    /* Changed to fixed so it stays */
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    /* Modern shadow */
+    border-bottom: 1px solid #e5e7eb;
+    /* Separator line */
+    padding: 15px 0;
+    /* Adjusted padding to account for the box */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.nav-socials {
+    display: flex;
+    gap: 12px;
+    margin-left: 15px;
+    border-left: 1px solid #e5e7eb;
+    padding-left: 20px;
+}
+
+.nav-social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    /* Light gray border */
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.nav-social-icon:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: rgba(70, 173, 249, 0.05);
+    /* Very light blue background */
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .nav-right {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        position: relative;
+        /* Prevents a tall stacked navbar from covering half the screen */
+        padding: 25px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-socials {
+        display: flex;
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+    }
+}
